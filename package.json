@@ -9,8 +9,12 @@
   },
   "keywords": [],
   "author": "Apexean",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "electron": "^41.2.2"
-  }
+  },
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/Apexean/Webby.git"
+}
 }
