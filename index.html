@@ -40,19 +40,27 @@
     </div>
 
     <script>
-        const { ipcRenderer } = require("electron");
+    const { ipcRenderer } = require("electron");
 
-        const address = document.getElementById("address");
+    const address = document.getElementById("address");
 
-        address.addEventListener("keydown", e => {
-            if (e.key === "Enter") {
-                ipcRenderer.send("navigate", address.value);
-            }
-        });
+    // Enter key loads URL
+    address.addEventListener("keydown", e => {
+        if (e.key === "Enter") {
+            ipcRenderer.send("navigate", address.value);
+        }
+    });
 
-        document.getElementById("back").onclick = () => ipcRenderer.send("back");
-        document.getElementById("forward").onclick = () => ipcRenderer.send("forward");
-        document.getElementById("home").onclick = () => ipcRenderer.send("navigate", "https://www.bing.com");
-    </script>
+    // Buttons
+    document.getElementById("back").onclick = () => ipcRenderer.send("back");
+    document.getElementById("forward").onclick = () => ipcRenderer.send("forward");
+    document.getElementById("home").onclick = () => ipcRenderer.send("home");
+
+    // Update address bar when page changes
+    ipcRenderer.on("update-address", (event, url) => {
+        address.value = url;
+    });
+</script>
+
 </body>
 </html>
