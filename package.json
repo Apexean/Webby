@@ -9,5 +9,8 @@
   },
   "keywords": [],
   "author": "Apexean",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^41.2.2"
+  }
 }
