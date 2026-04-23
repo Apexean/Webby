@@ -27,6 +27,6 @@
     },
     "mac": {
       "icon": "build/icon.icns"
-    },
+    }
   }
 }
