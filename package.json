@@ -21,7 +21,7 @@
   "devDependencies": {
     "electron-packager": "^17.1.2"
   },
-  build: {
+  "build": {
     "win": {
       "icon": "build/icon.ico"
     },
