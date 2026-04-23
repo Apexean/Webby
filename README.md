@@ -1,2 +1,2 @@
 # Webby
-A browser powered by Electron and Google.
+A browser powered by Electron and Microsoft Bing.
