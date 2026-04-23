@@ -20,5 +20,13 @@
   },
   "devDependencies": {
     "electron-packager": "^17.1.2"
+  },
+  build: {
+    "win": {
+      "icon": "build/icon.ico"
+    },
+    "mac": {
+      "icon": "build/icon.icns"
+    },
   }
 }
